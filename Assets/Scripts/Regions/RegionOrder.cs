@@ -3,14 +3,27 @@ using UnityEngine;
 
 public class RegionOrder : MonoBehaviour
 {
-
-    public Action EventSample;
-
-    public int PublicPropertySample { get; set; }
+    #region PUBLIC VARIABLES
 
     public string publicVariableSample;
 
+    public int PublicPropertySample { get; set; }
+
+    #endregion
+
+    #region EVENT
+
+    public Action EventSample;
+
+    #endregion
+
+    #region PRIVATE VARIABLES
+
     private string _privateVariableSample;
+
+    #endregion
+
+    #region UNITY METHOD
 
     private void Awake()
     {
@@ -22,18 +35,19 @@ public class RegionOrder : MonoBehaviour
 
     }
 
+    #endregion 
+
+    #region OWN METHODS
 
     private void PrivateSampleMethod()
     {
 
-    }
-
+    } 
 
     public void PublicSampleMethod()
     {
 
     }
-
 
     private void OnEventSample()
     {
@@ -42,4 +56,6 @@ public class RegionOrder : MonoBehaviour
             EventSample.Invoke();
         }
     }
+
+    #endregion
 }
